@@ -11,7 +11,11 @@ namespace Excercise5A
         static void Main(string[] args)
         {
             Print_a_2_z_v1();
-            Print_z_2_a_V2();
+            while(true )
+            {
+                char c = Console.ReadKey().KeyChar;
+                Console.WriteLine(Char2Code(c));
+            }
         }
         public static void Print_a_2_z_v1()
         {
@@ -23,15 +27,24 @@ namespace Excercise5A
          }
          
         }
-        public static void Print_z_2_a_V2()
+       
+        public static int Char2Code(char c)
         {
-            char[] za = Enumerable.Range('z', 'a' - 'z' + 1).Select(i => (char)i).ToArray();
-            foreach (var b in za)
-            {
-                Console.WriteLine(b);
-            }
+            return (int)c;
         }
-
+        public static bool IsUpper(char c)
+        {
+            return false;
+        }
+        public static bool IsLower(char c)
+        {
+            return false;
+        }
+        public static char ToUpper(char c)
+        {
+            return c;
+        }
+       
     
     }
 }
